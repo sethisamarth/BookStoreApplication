@@ -13,7 +13,7 @@ Password varchar(50) NOT NULL
 )
 
 -- creating store procedure for user
-Create procedure usp_AddUser
+Create procedure usp_AddUsers
 (   
     @UserName VARCHAR(50),
     @Email VARCHAR(50),   
@@ -22,6 +22,8 @@ Create procedure usp_AddUser
 )   
 as  
 Begin    
-    Insert into RegUser (UserName,Email,PhoneNo,Password)    
+    Insert into RegUser   
 	Values (@UserName,@Email,@PhoneNo, @Password)    
 End
+
+exec usp_AddUsers 'samarth','sethi@gmail.com','7771966794','sam123456789';
