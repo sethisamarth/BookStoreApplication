@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "295efcff-3e9f-447f-94ea-9825e4132667": {
+      "ProjectGuid": "295efcff-3e9f-447f-94ea-9825e4132667",
+      "DisplayName": "BookStore",
+      "ColorIndex": 0
+    },
+    "6ce34355-a4cc-44e5-8526-8f29bc00ed12": {
+      "ProjectGuid": "6ce34355-a4cc-44e5-8526-8f29bc00ed12",
+      "DisplayName": "Businesslayer",
+      "ColorIndex": 1
+    },
+    "53005524-c59c-4c6d-adee-11a280a9f490": {
+      "ProjectGuid": "53005524-c59c-4c6d-adee-11a280a9f490",
+      "DisplayName": "CommonLayer",
+      "ColorIndex": 2
+    },
+    "8f3e56f3-8625-4a06-9638-f6b315f5bfe5": {
+      "ProjectGuid": "8f3e56f3-8625-4a06-9638-f6b315f5bfe5",
+      "DisplayName": "RepositoryLayer",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 4
+}
