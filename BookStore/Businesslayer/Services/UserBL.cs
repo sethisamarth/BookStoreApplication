@@ -14,6 +14,7 @@ namespace Businesslayer.Services
         {
             this.userRL = userRL;
         }
+
         public bool Register(RegisterModel userData)
         {
             try
@@ -25,6 +26,42 @@ namespace Businesslayer.Services
 
                 throw;
             }
+        }
+        public string Login(string EmailId, string Password)
+        {
+            try
+            {
+                return this.userRL.Login(EmailId, Password);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public bool ForgetPassword(string email)
+        {
+            try
+            {
+                return this.userRL.ForgetPassword(email);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public bool ResetPassword(ResetPassword reset, string email)
+        {
+            try
+            {
+                return this.userRL.ResetPassword(reset, email);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
         }
     }
 }

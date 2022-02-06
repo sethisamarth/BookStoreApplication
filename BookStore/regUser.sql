@@ -12,12 +12,14 @@ PhoneNo varchar(50) NOT NULL,
 Password varchar(50) NOT NULL
 )
 
+select * from RegUser
+
 -- creating store procedure for user
 Create procedure usp_AddUsers
 (   
     @UserName VARCHAR(50),
     @Email VARCHAR(50),   
-    @PhoneNo VARCHAR(50),   
+    @PhoneNo VARCHAR(50),    
 	@Password VARCHAR(50) 
 )   
 as  
@@ -27,3 +29,30 @@ Begin
 End
 
 exec usp_AddUsers 'samarth','sethi@gmail.com','7771966794','sam123456789';
+
+CREATE PROCEDURE SP_Login
+(
+	@Email varchar(100),
+	@Password varchar(400)
+)
+AS
+BEGIN
+	SELECT Email, Password FROM RegUser 
+	WHERE @Email=Email AND @Password=Password
+END;
+
+exec SP_Login 'sethi@gmail.com','sam123456789';
+
+CREATE PROCEDURE SP_Forget
+(
+	@Email varchar(100)
+)
+AS
+BEGIN
+	SELECT UserId,Email FROM RegUser 
+	WHERE @Email=Email 
+END;
+
+exec SP_Forget 'sethi@gmail.com';
+
+drop PROCEDURE SP_Forget
