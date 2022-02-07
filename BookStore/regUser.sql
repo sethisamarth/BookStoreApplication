@@ -12,7 +12,7 @@ PhoneNo varchar(50) NOT NULL,
 Password varchar(50) NOT NULL
 )
 
-select * from RegUser
+ 
 
 -- creating store procedure for user
 Create procedure usp_AddUsers
@@ -56,3 +56,21 @@ END;
 exec SP_Forget 'sethi@gmail.com';
 
 drop PROCEDURE SP_Forget
+
+delete from RegUser where UserId=3
+
+select * from RegUser
+
+
+create procedure SP_ResetPassword
+ (
+    @Email varchar(30),
+	@Password varchar(40)
+)
+ as
+ begin
+	 Update RegUser 
+	 SET Password=@Password
+	 where Email=@Email
+	 Select * from RegUser where Email=@Email; 
+ End;

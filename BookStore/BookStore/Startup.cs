@@ -39,6 +39,8 @@ namespace BookStore
             services.AddTransient<IUserRL, UserRL>();
             services.AddTransient<IBookRL,BookRL>();
             services.AddTransient<IBookBL, BookBL>();
+            services.AddTransient<ICartBL, CartBL>();
+            services.AddTransient<ICartRL, CartRL>();
             services.AddSwaggerGen(swagger => {
 
                 // To Enable authorization using Swagger (JWT)  
